@@ -1,0 +1,258 @@
+.text-editor-content,
+.text-editor-textarea {
+  /*float: left;*/
+  /*border: 1px solid #a4a4a4;*/
+  /*height: 200px;*/
+  /*width: 49%;*/
+  overflow: hidden; }
+
+.touch #debugging-info {
+  margin: 10px auto;
+  width: 150px;
+  text-align: center;
+  background-color: cyan;
+  display: block; }
+
+.no-touch #debugging-info {
+  display: none; }
+
+.toolbar {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .15s ease-in-out;
+  -moz-transition: opacity .15s ease-in-out;
+  -webkit-transition: opacity .15s ease-in-out;
+  z-index: 1000; }
+  .toolbar .button-container {
+    position: relative;
+    width: 100%; }
+  .toolbar .arrow-pointer {
+    position: relative;
+    display: block;
+    margin-left: 0px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black; }
+  .toolbar .arrow-pointer-bottom {
+    border-bottom: none;
+    border-top: 5px solid black; }
+
+.no-touch .toolbar .main-menu-buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .no-touch .toolbar .main-menu-buttons > button {
+    float: left;
+    margin: 0;
+    padding: 2px 6px;
+    float: left;
+    font-size: 1em;
+    border: none;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    color: #000;
+    background-color: #eee; }
+  .no-touch .toolbar .main-menu-buttons > button:first-child {
+    border-left: 1px solid #999; }
+  .no-touch .toolbar .main-menu-buttons > button:hover,
+  .no-touch .toolbar .main-menu-buttons > button.is-selected {
+    color: #000;
+    background-color: #ccc; }
+  .no-touch .toolbar .main-menu-buttons > button:active {
+    color: #000;
+    background-color: #bbb; }
+.no-touch .toolbar .context-menu, .no-touch .toolbar .color-menu, .no-touch .toolbar .paragraph-menu {
+  position: absolute;
+  padding: 4px;
+  height: 0;
+  width: 106px;
+  border: 1px solid #aaa;
+  background-color: white;
+  overflow: hidden;
+  display: block;
+  visibility: hidden;
+  z-index: -999; }
+  .no-touch .toolbar .context-menu > button.back-to-main, .no-touch .toolbar .color-menu > button.back-to-main, .no-touch .toolbar .paragraph-menu > button.back-to-main {
+    display: none;
+    font-size: .7em;
+    float: left;
+    height: 31px;
+    width: 15%;
+    border: 1px solid #555;
+    margin: 0 2px 0 0; }
+  .no-touch .toolbar .context-menu .sub-menu-container, .no-touch .toolbar .color-menu .sub-menu-container, .no-touch .toolbar .paragraph-menu .sub-menu-container {
+    padding: 2px; }
+  .no-touch .toolbar .context-menu .sub-menu-container:before, .no-touch .toolbar .color-menu .sub-menu-container:before, .no-touch .toolbar .paragraph-menu .sub-menu-container:before,
+  .no-touch .toolbar .context-menu .sub-menu-container:after,
+  .no-touch .toolbar .color-menu .sub-menu-container:after,
+  .no-touch .toolbar .paragraph-menu .sub-menu-container:after {
+    content: "";
+    display: table; }
+  .no-touch .toolbar .context-menu .sub-menu-container:after, .no-touch .toolbar .color-menu .sub-menu-container:after, .no-touch .toolbar .paragraph-menu .sub-menu-container:after {
+    clear: both; }
+.no-touch .toolbar .color-menu {
+  margin: -1px 0 0 89px; }
+  .no-touch .toolbar .color-menu button {
+    float: left;
+    width: 21px;
+    height: 21px;
+    display: block;
+    border: 2px solid #555;
+    margin: 2px 2px 0 0;
+    background-color: #fff; }
+  .no-touch .toolbar .color-menu button:hover {
+    border: 2px solid #aaa; }
+  .no-touch .toolbar .color-menu button#color-red {
+    background-color: red; }
+  .no-touch .toolbar .color-menu button#color-green {
+    background-color: green; }
+  .no-touch .toolbar .color-menu button#color-blue {
+    background-color: blue; }
+.no-touch .toolbar .color-menu.located-reverse {
+  margin: -130px 0 0 89px; }
+.no-touch .toolbar .color-menu.show-menu {
+  visibility: visible;
+  height: 110px;
+  transition: height .2s ease-in-out;
+  -moz-transition: height .2s ease-in-out;
+  -webkit-transition: height .2s ease-in-out; }
+.no-touch .toolbar .paragraph-menu {
+  margin: -1px 0 0 140px; }
+  .no-touch .toolbar .paragraph-menu button {
+    width: 94px;
+    display: block;
+    border: 2px solid #555;
+    margin: 2px 2px 0 0;
+    background-color: #fff; }
+.no-touch .toolbar .paragraph-menu.located-reverse {
+  margin: -130px 0 0 140px; }
+.no-touch .toolbar .paragraph-menu.show-menu {
+  visibility: visible;
+  height: 110px;
+  transition: height .2s ease-in-out;
+  -moz-transition: height .2s ease-in-out;
+  -webkit-transition: height .2s ease-in-out; }
+
+.touch .toolbar {
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  .touch .toolbar .buttons-container {
+    height: 51px;
+    overflow: hidden; }
+  .touch .toolbar .main-menu {
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition: margin .15s ease-in-out;
+    -moz-transition: margin .15s ease-in-out;
+    -webkit-transition: margin .15s ease-in-out; }
+    .touch .toolbar .main-menu .main-menu-buttons {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 787px; }
+      .touch .toolbar .main-menu .main-menu-buttons > button {
+        float: none;
+        white-space: nowrap;
+        display: inline;
+        margin: 0;
+        padding: 15px 30px;
+        float: left;
+        font-size: 1em;
+        border: none;
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        color: #000;
+        background-color: #eee; }
+      .touch .toolbar .main-menu .main-menu-buttons > button:first-child {
+        border-left: 1px solid #999; }
+      .touch .toolbar .main-menu .main-menu-buttons > button:hover,
+      .touch .toolbar .main-menu .main-menu-buttons > button.is-selected {
+        color: #000;
+        background-color: #ccc; }
+      .touch .toolbar .main-menu .main-menu-buttons > button:active {
+        color: #000;
+        background-color: #bbb; }
+  .touch .toolbar .main-menu.hide-main-menu {
+    margin-top: -51px;
+    transition: margin .15s ease-in-out;
+    -moz-transition: margin .15s ease-in-out;
+    -webkit-transition: margin .15s ease-in-out; }
+  .touch .toolbar .context-menu, .touch .toolbar .color-menu, .touch .toolbar .paragraph-menu {
+    left: 0;
+    height: 51px;
+    width: 100%;
+    border: 1px solid #aaa;
+    background-color: white; }
+    .touch .toolbar .context-menu .sub-menu-holder, .touch .toolbar .color-menu .sub-menu-holder, .touch .toolbar .paragraph-menu .sub-menu-holder {
+      position: relative;
+      width: 84%;
+      overflow: auto;
+      overflow-y: hidden;
+      display: inline-block; }
+    .touch .toolbar .context-menu > button.back-to-main, .touch .toolbar .color-menu > button.back-to-main, .touch .toolbar .paragraph-menu > button.back-to-main {
+      position: relative;
+      font-size: .7em;
+      float: left;
+      display: inline-block;
+      height: 41px;
+      width: 15%;
+      border: 1px solid #555;
+      margin: 0 2px 0 0; }
+  .touch .toolbar .color-menu .sub-menu-container {
+    width: 600px; }
+    .touch .toolbar .color-menu .sub-menu-container > button {
+      width: 37px;
+      height: 37px;
+      display: inline-block;
+      border: 2px solid #555;
+      margin: 0 2px 0 0; }
+    .touch .toolbar .color-menu .sub-menu-container > button:hover {
+      border: 2px solid #aaa; }
+    .touch .toolbar .color-menu .sub-menu-container > button#color-red {
+      background-color: red; }
+    .touch .toolbar .color-menu .sub-menu-container > button#color-green {
+      background-color: green; }
+    .touch .toolbar .color-menu .sub-menu-container > button#color-blue {
+      background-color: blue; }
+  .touch .toolbar .color-menu.show-menu {
+    margin-top: 0; }
+  .touch .toolbar .paragraph-menu .sub-menu-container {
+    width: 500px; }
+    .touch .toolbar .paragraph-menu .sub-menu-container > button {
+      height: 37px;
+      display: inline-block;
+      border: 2px solid #555;
+      margin: 0 2px 0 0; }
+    .touch .toolbar .paragraph-menu .sub-menu-container > button:hover {
+      border: 2px solid #aaa; }
+  .touch .toolbar .hide-menu {
+    display: none; }
+
+/* Should be at the bottom to overwrite other styles */
+.show-tools {
+  visibility: visible;
+  opacity: 1; }
+
+#main-content {
+  height: 100%;
+  -webkit-overflow-scrolling: touch; }
+
+/* old Smartphones (portrait and landscape) ----------- */
+@media screen and (max-width: 28.688em) {
+  .text-editor-content,
+  .text-editor-textarea {
+    width: 100%; } }

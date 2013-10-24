@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html class="no-js js-panel">
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>V6</title>
+        <link rel="stylesheet" type="text/css" href="css/component.css">
+        <link rel="stylesheet" type="text/css" href="css/style_toolbar.css">
+        <link rel="stylesheet" type="text/css" href="css/style1.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link href='http://fonts.googleapis.com/css?family=Alef|Merriweather+Sans:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/if-ie.js"></script>
+	</head>
+	<body>
+    <div id="toolbar" class="toolbar group">
+        <div id="arrow-pointer" class="arrow-pointer"></div>
+        
+        <div id="buttons-container" class="buttons-container group">
+            <div id="main-menu" class="main-menu group">
+                <div class="main-menu-buttons group">
+                    <button id="toggle-bold">Bold</button>
+                    <button id="toggle-italic">Italic</button>
+                    <button id="toggle-color-menu">Color</button>
+                    <button id="toggle-paragraph-menu">Paragraph</button>
+                    <button id="toggle-web-link">Web Link</button>
+                    <button id="toggle-email-link">Email Link</button>
+                    <button id="remove-formatting">Plain</button>
+                </div><!-- /.main-menu-buttons -->
+            </div><!-- /.main-menu -->
+
+
+            <div id="color-menu" class="color-menu group">
+                <button id="back-main-from-color" class="back-to-main">\/ Go back</button>
+                
+                <div class="sub-menu-holder">
+                    <div class="sub-menu-container">
+                        <button id="color-red" class="color-pick"></button>
+                        <button id="color-green" class="color-pick"></button>
+                        <button id="color-blue" class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                        <button class="color-pick"></button>
+                    </div><!-- /.sub-menu-container -->
+                </div><!-- /.sub-menu-holder -->
+            </div><!-- /#color-menu -->
+
+
+            <div id="paragraph-menu" class="paragraph-menu group">
+                <button id="back-main-from-paragraph" class="back-to-main">\/ Go back</button>
+                
+                <div class="sub-menu-holder">
+                    <div class="sub-menu-container">
+                        <button id="toggle-heading-h1">Heading 1</button>
+                        <button id="toggle-heading-h2">Heading 2</button>
+                        <button id="toggle-heading-h3">Fake heading 3</button>
+                    </div><!-- /.sub-menu-container -->
+                </div><!-- /.sub-menu-holder -->
+            </div><!-- #paragraph-menu -->
+
+        </div><!-- /#buttons-container -->
+    </div><!-- /#toolbar -->
+
+		<div id="outer-wrap">
+            <div id="headbar">
+                <div id="logo"></div>
+                <div id="head-content">
+                    <p>Welcome back, <span>John Connor</span> <a href="#"><i class="icon-signout"></i>Sign out</a></p>
+                </div>
+            </div>
+			<div id="inner-wrap">
+                
+                <div id="menu-column">
+                    <div class="menu-inner">
+                        <nav id="nav" role="navigation">
+                            <div class="block">
+                                <ul>
+                                    <li class="menu-section">
+                                        <p>FAVOURITE & FREQUENT</p>
+                                    </li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/post.png"><p>Post</p><i class="icon-star"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/file.png"><p>File</p><i class="icon-star"></i></a></li>
+                                        <li class="menu-section-separator"></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/talent.png"><p>Talent</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/cv-info.png"><p>CV Items</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/activitylog.png"><p>Activity Log</p><i class="icon-star-empty"></i></a></li>
+                                        <li class="menu-separator"></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div id="dl-menu" class="dl-menuwrapper">
+                            <ul class="dl-menu dl-menuopen">
+                                <li>
+                                    <a href="#"><img src="img/icons/16x16/mydetails-add.png">Add New</a>    
+                                    <ul class="dl-submenu">
+                                        <li class="dl-back"><a href="#">back</a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/post.png"><p>Post</p><i class="icon-star"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/file.png"><p>File</p><i class="icon-star"></i></a></li>
+                                        <li><a href="#"><img src="img/icons/16x16/cv-info.png">CV Items</a>
+                                            <ul class="dl-submenu">
+                                                <li class="dl-back"><a href="#">back</a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/personal.png"><p>Personal</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/professional.png"><p>Professional</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/academic.png"><p>Academic</p><i class="icon-star-empty"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><img src="img/icons/16x16/plan.png">Plan</a>
+                                            <ul class="dl-submenu">
+                                                <li class="dl-back"><a href="#">back</a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-plan.png"><p>Action Plan</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-plan.png"><p>Add new template</p><i class="icon-star-empty"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><img src="img/icons/16x16/experience.png">Experience</a>
+                                            <ul class="dl-submenu">
+                                                <li class="dl-back"><a href="#">back</a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-experience.png"><p>Activity</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-experience.png"><p>Meeting</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-experience.png"><p>Experience</p><i class="icon-star-empty"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><img src="img/icons/16x16/reflection.png">Reflection</a>
+                                            <ul class="dl-submenu">
+                                                <li class="dl-back"><a href="#">back</a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-reflection.png"><p>Journal Entry</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-reflection.png"><p>Sctructured Reflection</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-reflection.png"><p>What? So what? Now what?</p><i class="icon-star-empty"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><img src="img/icons/16x16/talent.png">Talent</a>
+                                            <ul class="dl-submenu">
+                                                <li class="dl-back"><a href="#">back</a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-talent.png"><p>Ability</p><i class="icon-star-empty"></i></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/rev-talent.png"><p>Achievement</p><i class="icon-star-empty"></i></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/icons/16x16/mydetails-edit.png">Design New</a>    
+                                    <ul class="dl-submenu">
+                                        <li class="dl-back"><a href="#">back</a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/activitylog.png"><p>Activity Log</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/blog.png"><p>Blog</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/collection.png"><p>Collection</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/cv.png"><p>CV</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/folio.png"><p>Folio Page</p><i class="icon-star-empty"></i></a></li>
+                                        <li><a href="#" class="group"><img src="img/icons/16x16/webfolio.png"><p>Webfolio</p><i class="icon-star-empty"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- /dl-menuwrapper -->
+                    </div><!-- /#inner -->
+                </div><!-- /#menu-column -->
+
+                <div class="column2move">
+                    <div class="center">
+                    <div id="content-column-wrapper">
+                        <div class="header-container">
+                            
+
+
+                            <div class="header-top-level-wrapper">
+
+                                <header id="top" role="banner">
+                                    <div class="block">
+                                        <a class="nav-btn" id="nav-open-btn" href="#nav">&#9776;</a>
+                                    </div>
+                                </header>
+
+                                <div class="header-container-content">
+                                    <!-- <p>Assets</p> -->
+                                    <ul id="main-dd-menu">
+                                        <li class="fav-frequent"><a href="#"><i class="icon-star-half-empty"></i></a>
+                                            <ul>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/post.png"><p>Post</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/file.png"><p>File</p></a></li>
+                                                <li class="menu-section-separator"></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/talent.png"><p>Talent</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/cv-info.png"><p>CV Items</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/activitylog.png"><p>Activity Log</p></a>
+                                            </ul>
+                                        </li>
+
+                                        <li class="add-new"><a href="#">Add new</a>
+                                            <ul>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/post.png"><p>Post</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/file.png"><p>File</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/cv-info.png"><p>CV Items</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/plan.png"><p>Plan</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/experience.png"><p>Experience</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/reflection.png"><p>Reflection</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/talent.png"><p>Talent</p></a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="design-new"><a href="#">Design new</a>
+                                            <ul>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/activitylog.png"><p>Activity Log</p></a>
+                                                </li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/blog.png"><p>Blog</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/collection.png"><p>Collection</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/cv.png"><p>CV</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/folio.png"><p>Folio Page</p></a></li>
+                                                <li><a href="#" class="group"><img src="img/icons/16x16/webfolio.png"><p>Webfolio</p></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div><!-- /.header-container-content -->
+
+                                <div class="list-menu-holder">
+                                    <div class="list-switch-menu-wrapper list-switch-menu-wrapper-open">
+                                        <a href="#" id="panel-open-btn"><i class="icon-spinner"></i> Everything</a>
+                                        <ul class="list-switch-menu">
+
+                                            <li class="group"><a href="#"><i class="icon-caret-down"></i></a></li>
+                                            <ul class="group">
+                                                <li><a href="#"><i class="icon-th-large"></i> Asset Store</a></li>
+                                                <li><a href="#"><i class="icon-star"></i> Resource Centre</a></li>
+                                                <li><a href="#"><i class="icon-envelope-alt"></i> Message Centre</a></li>
+                                                <li><a href="contacts/index.html"><i class="icon-user"></i> Contacts</a></li>
+                                                <li><a href="#"><i class="icon-globe"></i> Atlas</a></li>
+                                            </ul>
+                                        </ul><!-- /.list-switch-menu -->
+                                    </div><!-- /.list-switch-menu-wrapper -->
+                                </div><!-- /.list-menu-holder -->
+                                
+                            </div><!-- /.header-top-level-wrapper -->
+                            
+                            
+                            <div class="option-container">
+                                <div class="option-asset" id="option-asset">
+                                    <h4>Share</h4>
+                                    <form action="">
+                                        <p>To:</p><input type="text" name="to"><br>
+                                        <p>Bcc:</p><input type="text" name="bcc"><br>
+
+                                        <h5>Permissions</h5>
+                                        <input type="checkbox" name="permissions" value="view">view<br>
+                                        <input type="checkbox" name="permissions" value="comment">comment<br>
+                                        <input type="checkbox" name="permissions" value="contribute">contribute<br>
+                                        <input type="checkbox" name="permissions" value="copy">copy<br>
+                                        <input type="checkbox" name="permissions" value="collaborate">collaborate<br>
+
+
+                                        <h5>Message to recipients:</h5>
+                                        <textarea rows="3" cols="30"></textarea>
+                                    </form>
+                                </div><!-- /.option-asset -->
+                                
+                                <div class="option-delete" id="option-delete">
+                                    <h4>Are you sure?</h4>
+                                    <div class="yes-no">
+                                        <a href="#" id="delete-yes">yes</a>
+                                        <a href="#" id="delete-no">no</a>
+                                    </div>
+                                </div><!-- /.option-delete -->
+
+                            </div><!-- /option-container -->
+                            
+
+                            <div class="asset-menu-bg">
+                                <div class="asset-menu-overlay"></div>
+                                <ul class="asset-menu group">
+                                    <li><a href="#" id='option-share-btn'>Share</a></li>
+                                    <li><a href="#">Submit</a></li>
+                                    <li class="more">
+                                        <a href="#">More</a>
+                                        <ul class="group">
+                                            <li><a href="#">Publish</a></li>
+                                            <li><a href="#">Add To</a></li>
+                                            <li><a href="#">Organise</a></li>
+                                            <li class="asset-menu-delete"><a href="#" id="btn-option-asset-delete"><i class="icon-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="loading">Saving...</div>
+                        </div><!-- /.header-container -->
+
+
+
+                        <div id="content-column" class="nano">
+                            <div class="content-inner">
+                                
+                                
+                                
+                                
+
+                                
+                                <div class="content-header">
+                                    <form action="">
+                                        <textarea onkeyup="autoResize(event)" onkeydown="autoResize(event)" name="header" class="edit-box" rows="1">Post about pebble pad</textarea>
+                                    </form>
+
+                                    <!-- <h3 class="editable">Post about pebble pad</h3> -->
+                                    <form action="">
+                                        <textarea onkeyup="autoResize(event)" onkeydown="autoResize(event)" name="header" class="edit-box form-description" rows="1">Description should go here...</textarea>
+                                    </form>
+                                    <!-- <h5 class="editable">Description should go here...</h5> -->
+                                </div>
+                                <div class="content-container">
+                                    
+                                    <div style="margin-top: 20px; margin-bottom: 10px;" class="text-editor-content editable" contenteditable><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div></div>
+                                    <textarea style="display: none;" name="text-editor-textarea" id="any-id-here" class="text-editor-textarea"></textarea>
+                                    
+                                    <img src="img/ladybird.jpg">
+                                    <div style="margin-top: 20px; margin-bottom: 10px;" class="text-editor-content editable" contenteditable><div>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</div></div>
+                                    <textarea style="display: none;" name="text-editor-textarea" id="any-id-here" class="text-editor-textarea"></textarea>
+                                    <!-- <p class="editable">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in <img src="img/curlySkyNumbers.jpg">hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p> -->
+                                    
+                                    <h3>Here are some input forms</h3>
+                                    <p>
+                                        <form NAME="forminput" ACTION="formlist.htm" METHOD="get">
+                                            <H3>Text</H3>
+                                            <INPUT TYPE="text" VALUE="Type some text here."> A text input field.
+                                            <BR><BR>
+                                            <INPUT TYPE="password" VALUE="88888888"> A password input field.
+                                            <BR><BR>
+                                            <INPUT TYPE="hidden" VALUE="Secret Stuff to send to CGI">There's hidden input here. Use <EM>View / Page Source</EM> to see the HTML source code.</P> to see it.
+                                            <BR><BR>
+
+                                            <H3>Radio Buttons</H3>
+                                            <ul class="list-radio group">
+                                                <li><input type="radio" name="radio">Try clicking this</li>
+                                                <li><input type="radio" name="radio">And this button,</li>
+                                                <li><input type="radio" name="radio">And this button, all at once.</li>
+                                                <li><input type="radio" name="radio">And this button, all at once.</li>
+                                                <li><input type="radio" name="radio">And this button, all at once.</li>
+                                                <li><input type="radio" name="radio">And this button, all at once.</li>
+                                            </ul>
+
+                                            <H3>Check Boxes</H3>
+                                            <ul class="list-checkbox group">
+                                                <li><input type="checkbox" name="car" value="1"> BMW</li>
+                                                <li><input type="checkbox" name="car" value="2"> AUDI</li>
+                                                <li><input type="checkbox" name="car" value="3"> Volkswagen</li>
+                                                <li><input type="checkbox" name="car" value="4"> Toyota</li>
+                                                <li><input type="checkbox" name="car" value="5"> Ford</li>
+                                                <li><input type="checkbox" name="car" value="6"> Nissan</li>
+                                                <li><input type="checkbox" name="car" value="7"> Mazda</li>
+                                                <li><input type="checkbox" name="car" value="8"> Mitsubishi</li>
+                                            </ul>
+
+                                            <H3>Buttons</H3>
+                                            A <INPUT TYPE="button" VALUE="Button"> that does nothing.
+                                            <BR><BR>
+                                            A <INPUT TYPE="submit" VALUE="Submit"> button (ACTION specifies reloading this page).
+                                            <BR><BR>
+                                            A <INPUT TYPE="reset" VALUE="Reset"> button (resets all of the above elements to default values).
+                                        </form>
+                                    </p>
+
+                                    <h3>Select Form Elements</h3>
+                                    <form NAME="formselect" ACTION="formlist.htm" METHOD="get">
+                                    A SELECT box of SIZE=&quot;3&quot;:<BR>
+                                    <SELECT SIZE="3">
+                                    <OPTION>ONE
+                                    <OPTION>TWO
+                                    <OPTION>THREE
+                                    </SELECT>
+                                    <BR><BR>
+                                    A SELECT box of with no SIZE specified:<BR>
+                                    <SELECT SIZE="">
+                                    <OPTION>ONE
+                                    <OPTION>TWO
+                                    <OPTION>THREE
+                                    </SELECT>
+                                    <BR><BR>
+                                    A <INPUT TYPE="reset" VALUE="Reset"> button (resets the select elements to default values).
+                                    </form>
+
+                                    <div style="margin-top: 20px; margin-bottom: 10px;" class="text-editor-content editable" contenteditable><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit! Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div></div>
+                                    <textarea style="display: none;" name="text-editor-textarea" id="any-id-here" class="text-editor-textarea"></textarea>
+
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p> -->
+                                    <img src="img/ladybird.jpg">
+
+                                    <h3>Responsive table</h3>
+                                    <p>
+                                        <table class="responsive-table">
+                                            <thead>
+                                            <tr>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Job Title</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>James</td>
+                                                <td>Matman</td>
+                                                <td>Chief Sandwich Eater</td>
+                                            </tr>
+                                            <tr>
+                                                <td>The</td>
+                                                <td>Tick</td>
+                                                <td>Crimefighter Sorta</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                                </div> <!-- /.content-rest -->
+                            </div> <!-- /#inner -->
+                        </div> <!-- /#content-column -->
+                    </div><!-- /#content-column-wrapper -->
+
+                    <div id="assets-column-wrapper">
+                            <div class="header-container-removed">
+                            </div><!-- /.header-container -->
+
+                            <div class="list-ext-options">
+                                <form action="" class="list-form">
+                                    <i class="icon-search"></i><input type="search" name="search" placeholder="Search" class="list-search">
+                                </form>
+
+                                <ul class="list-sorting">
+                                    <li><a href="#">New First <i class="icon-sort"></i></a></li>
+                                    <ul>
+                                        <li><a href="#">Old First</a></li>
+                                        <li><a href="#">A-Z</a></li>
+                                        <li><a href="#">Z-A</a></li>
+                                        <li><a href="#">By Groups</a></li>
+                                        <li><a href="#">Frequency</a></li>
+                                    </ul>
+                                </ul><!-- /.list-sorting -->
+                            </div><!-- /.list-ext-options -->
+                            
+                            <div id="assets-column">
+                                <div class=".assets-inner">
+                                
+                                <div class="section-item group">
+                                    <p>Recently opened</p>
+                                </div> <!-- end .section-item -->
+                                <div class="recently-opened">
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Post about pebble pad</h5>
+                                            <p class="asset-cr-date" title="05/06/2013">1 day ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+                                    <div class="message-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/messages.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Andrea Williams</h5>
+                                            <p>To confirm your holiday entitlement, you have a total of 14 days holiday from your start date of 13th May 2013 to the 31st December 2013.</p>
+                                            <p class="item-date" title="03/06/2013">Received 1 day ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+                                </div><!-- /.recently-opened -->
+                                <div class="section-item section-item-end group"></div> <!-- end .item-icon -->
+
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>A really long name that should be done for testing</h5>
+                                            <p class="asset-cr-date" title="06/06/2013">less than 1 hour ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="message-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/messages.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Charlotte Barnes</h5>
+                                            <p><a href="#">Charlotte Barnes</a> shared the asset <a href="#">Presentation for Innovation Course</a> with you on 13 May 2013 with this message: An Asset has been shared with you</p>
+                                            <p class="item-date" title="06/06/2013">2 hours ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/folio.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>First Folio page</h5>
+                                            <p class="asset-cr-date" title="06/06/2013">2 hours ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/blog.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Main blog</h5>
+                                            <p class="asset-cr-date" title="06/06/2013">10 hours ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="contact-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/mydetails.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Charlotte Barnes</h5>
+                                            <p>charlotte@pebblelearning.co.uk</p>
+                                            <p class="item-date" title="06/06/2013">Added 12 hours ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .contact-item -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/avatar.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>This is file with avatar</h5>
+                                            <p class="asset-cr-date" title="06/06/2013">23 hours ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Post about pebble pad</h5>
+                                            <p class="asset-cr-date" title="05/06/2013">1 day ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="message-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/messages.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Andrea Williams</h5>
+                                            <p>To confirm your holiday entitlement, you have a total of 14 days holiday from your start date of 13th May 2013 to the 31st December 2013.</p>
+                                            <p class="item-date" title="03/06/2013">Received 1 day ago</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/referees.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Massimo Busacca</h5>
+                                            <p class="asset-cr-date" title="04/06/2013">04/06/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/webfolio.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Test Webfolio</h5>
+                                            <p class="asset-cr-date" title="01/06/2013">01/06/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/blog.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Another post created for testing</h5>
+                                            <p class="asset-cr-date" title="21/05/2013">21/05/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/avatar.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Uploaded image as a asset</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/referees.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>One more referee</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Post about something interesting</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="contact-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/mydetails.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Shane Sutherland</h5>
+                                            <p>shane@pebblelearning.co.uk</p>
+                                            <p class="item-date" title="06/06/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .contact-item -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/blog.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Blog about milk, coffee and tea</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/folio.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="contact-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/mydetails.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Colin Dalziel</h5>
+                                            <p>colin@pebblelearning.co.uk</p>
+                                            <p class="item-date" title="06/06/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .contact-item -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/webfolio.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/blog.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+                                    
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/post.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="asset-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/blog.png" alt="post">
+                                        </div>
+                                        <div class="item-title">
+                                            <h5>Folio page with some content</h5>
+                                            <p class="asset-cr-date" title="14/04/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .item-icon -->
+
+                                    <div class="contact-item group">
+                                        <div class="item-icon">
+                                            <img src="img/icons/mydetails.png" alt="post">
+                                        </div>
+                                        <div class="item-content">
+                                            <h5>Alison Poot</h5>
+                                            <p>alison@pebblelearning.co.uk</p>
+                                            <p class="item-date" title="06/06/2013">14/04/2013</p>
+                                            <a href='#'><span></span></a>
+                                        </div>
+                                    </div> <!-- end .contact-item -->
+
+
+                                </div><!-- /#inner -->
+                            </div><!-- /#assets-column -->
+                        </div><!-- /#assets-column-wrapper -->
+                        <!-- <div class="clear"></div> -->
+                        </div><!-- /.center -->
+                    </div><!-- /#column2move -->
+                    <!-- <div class="clear"></div> -->
+            </div> <!-- /#inner-wrap -->
+        </div> <!-- /#outer-wrap -->
+
+        <script src="js/main.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.dlmenu.js"></script>
+        <script src="js/editable.js"></script>
+        
+        <script>
+            $(function() {
+                $( '#dl-menu' ).dlmenu({
+                    animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' }
+                });
+            });
+        </script>
+
+        <script>
+            function autoResize(e) {
+                var ele = e.target;
+
+                var t = ele.scrollTop;
+                ele.scrollTop = 0;
+                if (t > 0) {
+                    ele.style.height = (ele.offsetHeight + t) + "px";
+                }
+            }
+        </script>
+
+        <script>
+            yepnope({
+              test : Modernizr.touch,
+              yep  : ['js/fastclick.js', 'js/pebble-text-editor-mobile.js'],
+              nope : 'js/pebble-text-editor.js'
+            });
+        </script>
+
+    </body>
+</html>
