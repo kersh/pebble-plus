@@ -1252,7 +1252,7 @@ table.responsive-table td, table.responsive-table th {
     z-index: 2;
     float: right;
     padding: 0;
-    margin: 0;
+    margin: -11px 0 0 0;
     font-size: 0.7em;
     color: #BDC3C7;
     cursor: context-menu;
@@ -1270,7 +1270,25 @@ table.responsive-table td, table.responsive-table th {
 
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
-  background-image: url('empty.gif');
+  /*background-image: url('empty.gif');*/
+}
+.asset-item .additional-options {
+  visibility: hidden;
+  font-size: .8em;
+  position: relative;
+  display: block;
+  float: right;
+  margin: -2px 0 0 0;
+}
+.asset-item:hover .additional-options {
+  visibility: visible;
+}
+.asset-item .additional-options a {
+  color: #888;
+  margin-left: 4px;
+}
+.asset-item .additional-options a:hover {
+  color: #222;
 }
 
 .message-item {
@@ -1330,7 +1348,7 @@ table.responsive-table td, table.responsive-table th {
   z-index: 2;
   float: right;
   padding: 0;
-  margin: 0;
+  margin: -11px 0 0 0;
   font-size: 0.7em;
   color: #BDC3C7;
   cursor: context-menu;
@@ -1349,6 +1367,25 @@ table.responsive-table td, table.responsive-table th {
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
   background-image: url('empty.gif');
+}
+
+.message-item .additional-options {
+  visibility: hidden;
+  font-size: .8em;
+  position: relative;
+  display: block;
+  float: right;
+  margin: 0px 0 0 0;
+}
+.message-item:hover .additional-options {
+  visibility: visible;
+}
+.message-item .additional-options a {
+  color: #888;
+  margin-left: 4px;
+}
+.message-item .additional-options a:hover {
+  color: #222;
 }
 
 /*------------------------------------*\
@@ -1901,4 +1938,184 @@ table.responsive-table td, table.responsive-table th {
 .wrapper-dropdown-5.active .dropdown {
     border-bottom: 1px solid rgba(0,0,0,0.2);
     max-height: 400px;
+}
+
+#data-item {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* NEW STUFF GOES HERE */
+.new-item {
+  position: relative;
+  padding: 0.9em 0.5em;
+  border-bottom: 1px solid #ddd;
+  height: 1.5em;
+  margin: 0;
+  z-index: 1;
+}
+
+.new-item:hover {
+  background-color: #fff;
+  -webkit-box-shadow:  0px 0 3px -2px #111;
+  -moz-box-shadow:  0px 0 3px -2px #111;
+  box-shadow:  0px 0 3px -2px #111;
+  z-index: 2;
+}
+
+.new-item .item-icon { float: left; }
+
+.new-item .item-title h5 {
+  color: #000;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  padding: 0.2em 0 0.2em 0.4em;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden; 
+}
+.new-item .item-title .asset-cr-date {
+  position: relative;
+  z-index: 2;
+  float: right;
+  padding: 0;
+  margin: -11px 0 0 0;
+  font-size: 0.7em;
+  color: #BDC3C7;
+  /*cursor: context-menu;*/
+}
+
+.new-item .additional-options {
+  visibility: hidden;
+  font-size: .8em;
+  position: relative;
+  display: block;
+  float: right;
+  margin: -5px 0 0 0;
+}
+.new-item:hover .additional-options {
+  visibility: visible;
+}
+.new-item .additional-options a {
+  color: #888;
+  margin-left: 4px;
+}
+.new-item .additional-options a:hover {
+  color: #222;
+}
+
+
+
+
+
+
+
+/* Contact item */
+.new-item-contact {
+  position: relative;
+  padding: 0.9em 0.5em 0.1em;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  z-index: 1;
+}
+.new-item-contact:hover {
+  background-color: #fff;
+  -webkit-box-shadow:  0px 0 3px -2px #111;
+  -moz-box-shadow:  0px 0 3px -2px #111;
+  box-shadow:  0px 0 3px -2px #111;
+  z-index: 2;
+}
+/* empty span tag for clickable div links */
+.new-item-contact .item-icon, .new-item-contact .contact-content {
+  float: left;
+}
+.new-item-contact .contact-content {
+  width: 200px;
+}
+.new-item-contact .item-content h5 {
+  color: #000;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  padding: 0.25em 0 0.2em 0.4em;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+.new-item-contact .item-content p {
+  color: #888;
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  padding: 0em 0 0 0.4em;
+  margin: 0;
+  /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  height: 1.4em;
+  line-height: 1.4em;
+}
+  .new-item-contact .item-content p a {
+    color: #888;
+  }
+.new-item-contact .item-content {
+  display: block;
+  margin: 0 0 10px 0;
+}
+.new-item-contact .item-content .item-date {
+  position: relative;
+  z-index: 2;
+  float: right;
+  padding: 0;
+  margin: -11px 0 0 0;
+  font-size: 0.7em;
+  color: #BDC3C7;
+  cursor: context-menu;
+  height: auto;
+}
+.new-item-contact span {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  /* edit: added z-index */
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+  background-image: url('empty.gif');
+}
+
+.new-item-contact .additional-options {
+  visibility: hidden;
+  font-size: .8em;
+  position: relative;
+  display: block;
+  float: right;
+  margin: 0px 0 0 0;
+}
+.new-item-contact:hover .additional-options {
+  visibility: visible;
+}
+.new-item-contact .additional-options a {
+  color: #888;
+  margin-left: 4px;
+}
+.new-item-contact .additional-options a:hover {
+  color: #222;
 }
