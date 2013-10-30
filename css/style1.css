@@ -9,6 +9,8 @@
   width: device-width;
 }
 
+@import "need-for-scroll.css";
+
 /*
  * These selection declarations have to be separate
  * No text-shadow: twitter.com/miketaylr/status/12228805301
@@ -485,7 +487,7 @@ img {
   transition: width 500ms ease;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 12px;
 }
  
@@ -497,21 +499,19 @@ img {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: rgba(100, 100, 100, 0.35);
-}
+}*/
 
 #menu-column, #assets-column, #content-column {
   position: absolute;
   left: 0;
-  top: 5.89em;
-  bottom: 2.75em;
+  top: 0;
+  bottom: 5.75em;
   font-size: 1em;
   z-index: 4;
   /*height: 100%;*/
-  overflow: hidden;
-}
-#menu-column:hover, #assets-column:hover, #content-column:hover {
   overflow: auto;
 }
+
 * html #menu-column, * html #assets-column, * html #content-column {
   height: 100%;
   top: 0;
@@ -963,10 +963,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   transition: all 350ms ease;
 }
 .js-option-share #content-column {
-  top: 28.65em;
+  /*top: 28.65em;*/
 }
 .js-option-delete #content-column {
-  top: 12.68em;
+  /*top: 12.68em;*/
 }
 
 .js-panel #assets-column-wrapper {
@@ -980,7 +980,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 #assets-column {
-  top: 2.8em;
+  top: 0em;
   width: 100%;
   background: #f9f9f7;
   -webkit-transition: width 350ms ease;
@@ -1012,6 +1012,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 #content-column {
+  bottom: 9em;
   width: 100%;
   background: #fff;
   -webkit-transition: width 350ms ease;
@@ -1366,7 +1367,7 @@ table.responsive-table td, table.responsive-table th {
 
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
-  background-image: url('empty.gif');
+  /*background-image: url('empty.gif');*/
 }
 
 .message-item .additional-options {
@@ -1517,7 +1518,7 @@ table.responsive-table td, table.responsive-table th {
 
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
-  background-image: url('empty.gif');
+  /*background-image: url('empty.gif');*/
 }
 
 
@@ -1605,7 +1606,7 @@ table.responsive-table td, table.responsive-table th {
 
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
-  background-image: url('empty.gif');
+  /*background-image: url('empty.gif');*/
 }
 
 @media screen and (max-width: 65.625em) {
@@ -2098,7 +2099,7 @@ table.responsive-table td, table.responsive-table th {
 
   /* edit: fixes overlap error in IE7/8, 
      make sure you have an empty gif */
-  background-image: url('empty.gif');
+  /*background-image: url('empty.gif');*/
 }
 
 .new-item-contact .additional-options {
